@@ -11,6 +11,7 @@ export default async function EventPage({ params }) {
   let response = await fetch("https://szvdpeocqojvcebknuak.supabase.co/rest/v1/events?id=eq." + uuid, { headers: headersList });
 
   let data = await response.json();
+  console.log(data);
   const eventInfo = data[0];
 
   return (

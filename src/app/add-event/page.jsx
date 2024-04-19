@@ -9,7 +9,7 @@ export default async function AddEventPage() {
       Prefer: "return=representation",
       "Content-Type": "application/json",
     };
-    console.log(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+    // console.log(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
     let bodyContent = JSON.stringify({
       name: formData.get("name"),
       when: formData.get("when"),
@@ -23,7 +23,7 @@ export default async function AddEventPage() {
     });
 
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     const id = data[0].id;
     redirect("/events/" + id);
   }
